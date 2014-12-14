@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9DEFF6FE-FC4A-4F79-90C4-E1A8779367EE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Anbar</RootNamespace>
+    <AssemblyName>Anbar</AssemblyName>
+    <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>0CA9144BB7C77599C71977C4DEF606C683DC39E8</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Anbar_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>gift.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DateConversion.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Froms\Deliver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Froms\Deliver.Designer.cs">
+      <DependentUpon>Deliver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Froms\Employees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Froms\Employees.Designer.cs">
+      <DependentUpon>Employees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Froms\Incoming.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Froms\Incoming.Designer.cs">
+      <DependentUpon>Incoming.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Froms\Objects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Froms\Objects.Designer.cs">
+      <DependentUpon>Objects.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Froms\Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Froms\Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Froms\Resid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Froms\Resid.Designer.cs">
+      <DependentUpon>Resid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GetDate.cs" />
+    <Compile Include="Layers\BusinessObjectBase.cs" />
+    <Compile Include="Layers\CHANNELS.cs" />
+    <Compile Include="Layers\CHANNELSFactory.cs" />
+    <Compile Include="Layers\CHANNELSKeys.cs" />
+    <Compile Include="Layers\DataLayer\CHANNELSSql.cs" />
+    <Compile Include="Layers\DataLayer\DataLayerBase.cs" />
+    <Compile Include="Layers\DataLayer\DEPSSql.cs" />
+    <Compile Include="Layers\DataLayer\EmployeesSql.cs" />
+    <Compile Include="Layers\DataLayer\INCOMINGSql.cs" />
+    <Compile Include="Layers\DataLayer\OBJECTSSql.cs" />
+    <Compile Include="Layers\DataLayer\OWNERSSql.cs" />
+    <Compile Include="Layers\DataLayer\RESIDSql.cs" />
+    <Compile Include="Layers\DataLayer\RESID_DETAILSSql.cs" />
+    <Compile Include="Layers\DEPS.cs" />
+    <Compile Include="Layers\DEPSFactory.cs" />
+    <Compile Include="Layers\DEPSKeys.cs" />
+    <Compile Include="Layers\Employees.cs" />
+    <Compile Include="Layers\EmployeesFactory.cs" />
+    <Compile Include="Layers\EmployeesKeys.cs" />
+    <Compile Include="Layers\INCOMING.cs" />
+    <Compile Include="Layers\INCOMINGFactory.cs" />
+    <Compile Include="Layers\INCOMINGKeys.cs" />
+    <Compile Include="Layers\InvalidBusinessObjectException.cs" />
+    <Compile Include="Layers\OBJECTS.cs" />
+    <Compile Include="Layers\OBJECTSFactory.cs" />
+    <Compile Include="Layers\OBJECTSKeys.cs" />
+    <Compile Include="Layers\OWNERS.cs" />
+    <Compile Include="Layers\OWNERSFactory.cs" />
+    <Compile Include="Layers\OWNERSKeys.cs" />
+    <Compile Include="Layers\RESID.cs" />
+    <Compile Include="Layers\RESIDFactory.cs" />
+    <Compile Include="Layers\RESIDKeys.cs" />
+    <Compile Include="Layers\RESID_DETAILS.cs" />
+    <Compile Include="Layers\RESID_DETAILSFactory.cs" />
+    <Compile Include="Layers\RESID_DETAILSKeys.cs" />
+    <Compile Include="Layers\Validation\BrokenRule.cs" />
+    <Compile Include="Layers\Validation\BrokenRulesList.cs" />
+    <Compile Include="Layers\Validation\ValidateRuleBase.cs" />
+    <Compile Include="Layers\Validation\ValidateRuleNotNull.cs" />
+    <Compile Include="Layers\Validation\ValidateRuleRegexMatching.cs" />
+    <Compile Include="Layers\Validation\ValidateRuleStringMaxLength.cs" />
+    <Compile Include="Layers\Validation\ValidateRuleStringRequired.cs" />
+    <Compile Include="Layers\Validation\ValidationRules.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageBoxEx.cs" />
+    <Compile Include="MyDB.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MyDB.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="NewListItem.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Froms\Deliver.resx">
+      <DependentUpon>Deliver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Froms\Employees.resx">
+      <DependentUpon>Employees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Froms\Incoming.resx">
+      <DependentUpon>Incoming.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Froms\Objects.resx">
+      <DependentUpon>Objects.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Froms\Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Froms\Resid.resx">
+      <DependentUpon>Resid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Anbar_TemporaryKey.pfx" />
+    <None Include="app - Copy.Config" />
+    <None Include="app.Config" />
+    <None Include="MyDB.xsc">
+      <DependentUpon>MyDB.xsd</DependentUpon>
+    </None>
+    <None Include="MyDB.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MyDB.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="MyDB.xss">
+      <DependentUpon>MyDB.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pattern-wallpaper-background-516-hd-wallpapers.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download_box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gift.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="gift.ico" />
+    <None Include="Resources\find.png" />
+    <None Include="Resources\button_cancel.png" />
+    <None Include="Resources\camera_test.png" />
+    <None Include="Resources\pie_chart_red.png" />
+    <None Include="Resources\login.png" />
+    <None Include="Resources\LoginBg.png" />
+    <None Include="Resources\purple-patterns-backgrounds-wallpapers.jpg" />
+    <None Include="Resources\5243-purple-vintage-pattern-1920x1080-abstract-wallpaper.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
